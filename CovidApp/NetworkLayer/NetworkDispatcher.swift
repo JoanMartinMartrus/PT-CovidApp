@@ -39,6 +39,10 @@ class NetworkDispatcher {
                     completion(.failure(error))
                 }
             }
+            NetworkLogger.log(request: urlRequest)
+            if let httpResponse = response as? HTTPURLResponse {
+                NetworkLogger.log(response: httpResponse, data: data, error: error)
+            }
         }
         dataTask.resume()
     }

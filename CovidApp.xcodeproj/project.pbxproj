@@ -29,6 +29,7 @@
 		0A4BBD3B25BA16190048B2E4 /* CovidInfoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BBD3A25BA16190048B2E4 /* CovidInfoEndpoint.swift */; };
 		0A4BBD3F25BA20F30048B2E4 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BBD3E25BA20F30048B2E4 /* NetworkDispatcher.swift */; };
 		0AED97B725BB1B5300E57DE3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED97B625BB1B5300E57DE3 /* UIViewExtension.swift */; };
+		0AED97BD25BB360700E57DE3 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED97BC25BB360700E57DE3 /* NetworkLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		0A4BBD3A25BA16190048B2E4 /* CovidInfoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidInfoEndpoint.swift; sourceTree = "<group>"; };
 		0A4BBD3E25BA20F30048B2E4 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		0AED97B625BB1B5300E57DE3 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		0AED97BC25BB360700E57DE3 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		0A410D9A25B9F64F0063F8BB /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				0AED97BB25BB35F300E57DE3 /* NetworkUtils */,
 				0A4BBD3525BA08B20048B2E4 /* Endpoints */,
 				0A4BBD3E25BA20F30048B2E4 /* NetworkDispatcher.swift */,
 			);
@@ -177,6 +180,14 @@
 				0AED97B625BB1B5300E57DE3 /* UIViewExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		0AED97BB25BB35F300E57DE3 /* NetworkUtils */ = {
+			isa = PBXGroup;
+			children = (
+				0AED97BC25BB360700E57DE3 /* NetworkLogger.swift */,
+			);
+			path = NetworkUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 				0AED97B725BB1B5300E57DE3 /* UIViewExtension.swift in Sources */,
 				0A410D8425B9C24C0063F8BB /* AppDelegate.swift in Sources */,
 				0A4BBD3B25BA16190048B2E4 /* CovidInfoEndpoint.swift in Sources */,
+				0AED97BD25BB360700E57DE3 /* NetworkLogger.swift in Sources */,
 				0A4BBD2625B9FBF90048B2E4 /* CountryCovidInfo.swift in Sources */,
 				0A4BBD2D25B9FD000048B2E4 /* CountryCovidInfoCellCell.swift in Sources */,
 				0A4BBD3725BA08C80048B2E4 /* Endpoint.swift in Sources */,
