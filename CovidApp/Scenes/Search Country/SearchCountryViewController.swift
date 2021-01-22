@@ -18,7 +18,7 @@ protocol SearchCountryDisplayLogic: class
     func showError(error: Error)
 }
 
-class SearchCountryViewController: BaseViewController, SearchCountryDisplayLogic
+class SearchCountryViewController: BaseViewController, SearchCountryDisplayLogic, UISearchBarDelegate
 {
 
     var interactor: SearchCountryBusinessLogic?
@@ -30,16 +30,20 @@ class SearchCountryViewController: BaseViewController, SearchCountryDisplayLogic
     
     // MARK: Properties
     
+    lazy var searchBar:UISearchBar = UISearchBar()
+    
     var cellModels: [DrawerItemProtocol] = []
     
     // MARK: SearchCountryDisplayLogic protocol implementatios
     
     func showData(cellModels: [DrawerItemProtocol]) {
+        self.removeSpinner()
         self.cellModels = cellModels
         tableView.reloadData()
     }
     
     func showError(error: Error) {
+        self.removeSpinner()
         self.showErrorAlert(error: error)
     }
     
@@ -78,11 +82,41 @@ class SearchCountryViewController: BaseViewController, SearchCountryDisplayLogic
     {
         super.viewDidLoad()
         
+        configureNavigationController()
+        
         tableView.delegate = self
         tableView.dataSource = self
         
+        createSearchBar()
+        
+    }
+    
+    private func createSearchBar() {
+        searchBar.searchBarStyle = UISearchBar.Style.default
+        searchBar.placeholder = " Search..."
+        searchBar.sizeToFit()
+        searchBar.isTranslucent = true
+        searchBar.backgroundColor = #colorLiteral(red: 0.9762066007, green: 0.7820909023, blue: 0.7772926688, alpha: 1)
+        searchBar.delegate = self
+        navigationItem.titleView = searchBar
+    }
+    
+    private func configureNavigationController() {
+        self.title = "Covid Search"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        beginLoadInfo()
+    }
+    
+    private func beginLoadInfo() {
+        self.showSpinner(onView: self.view)
         interactor?.getCountriesCovidInfo()
     }
+    
+
   
 }
 

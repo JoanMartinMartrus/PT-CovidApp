@@ -19,20 +19,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lrj-8f-bDf">
-                    <rect key="frame" x="20" y="64" width="374" height="778"/>
-                    <color key="backgroundColor" red="0.96470588239999999" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" red="0.90980392160000001" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="sectionIndexBackgroundColor" red="0.96470588239999999" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="sectionIndexTrackingBackgroundColor" red="0.96470588235294119" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="0.90980392160000001" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.96470588239999999" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.90980392160000001" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Lrj-8f-bDf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="JxC-ti-aGq"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Lrj-8f-bDf" secondAttribute="bottom" constant="20" id="UUD-o5-Bdu"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lrj-8f-bDf" secondAttribute="trailing" constant="20" id="hfz-em-uhC"/>
-                <constraint firstItem="Lrj-8f-bDf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="phx-Ym-h6F"/>
+                <constraint firstItem="Lrj-8f-bDf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="JxC-ti-aGq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Lrj-8f-bDf" secondAttribute="bottom" id="UUD-o5-Bdu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lrj-8f-bDf" secondAttribute="trailing" id="hfz-em-uhC"/>
+                <constraint firstItem="Lrj-8f-bDf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="phx-Ym-h6F"/>
             </constraints>
             <point key="canvasLocation" x="97" y="96"/>
         </view>
