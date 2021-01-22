@@ -18,7 +18,7 @@ protocol SearchCountryDisplayLogic: class
     func showError(error: Error)
 }
 
-class SearchCountryViewController: BaseViewController, SearchCountryDisplayLogic, UISearchBarDelegate
+class SearchCountryViewController: BaseViewController, SearchCountryDisplayLogic
 {
 
     var interactor: SearchCountryBusinessLogic?
@@ -32,13 +32,16 @@ class SearchCountryViewController: BaseViewController, SearchCountryDisplayLogic
     
     lazy var searchBar:UISearchBar = UISearchBar()
     
-    var cellModels: [DrawerItemProtocol] = []
+    private var cellModels: [DrawerItemProtocol] = []
+    private var filteredCellModels: [DrawerItemProtocol] = []
+    
     
     // MARK: SearchCountryDisplayLogic protocol implementatios
     
     func showData(cellModels: [DrawerItemProtocol]) {
         self.removeSpinner()
         self.cellModels = cellModels
+        self.filteredCellModels = self.cellModels
         tableView.reloadData()
     }
     
@@ -123,15 +126,27 @@ class SearchCountryViewController: BaseViewController, SearchCountryDisplayLogic
 extension SearchCountryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellModels.count
+        return filteredCellModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellModel = cellModels[indexPath.row]
+        let cellModel = filteredCellModels[indexPath.row]
         let drawer = cellModel.cellDrawer
         let cell = drawer.dequeueCell(tableView, cellForRowAt: indexPath)
         drawer.drawCell(cell, withItem: cellModel, delegate: self, at: indexPath)
         return cell
+    }
+}
+
+extension SearchCountryViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredCellModels = cellModels.filter { (cellModel) -> Bool in
+            return (cellModel as? CountryCovidInfoCellViewModel)?.countryName.lowercased().contains(searchText.lowercased()) ?? false
+        }
+        if searchText.isEmpty {
+            filteredCellModels = cellModels
+        }
+        tableView.reloadData()
     }
     
     
