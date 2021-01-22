@@ -28,6 +28,7 @@
 		0A4BBD3725BA08C80048B2E4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BBD3625BA08C80048B2E4 /* Endpoint.swift */; };
 		0A4BBD3B25BA16190048B2E4 /* CovidInfoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BBD3A25BA16190048B2E4 /* CovidInfoEndpoint.swift */; };
 		0A4BBD3F25BA20F30048B2E4 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BBD3E25BA20F30048B2E4 /* NetworkDispatcher.swift */; };
+		0AED97B725BB1B5300E57DE3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED97B625BB1B5300E57DE3 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		0A4BBD3625BA08C80048B2E4 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		0A4BBD3A25BA16190048B2E4 /* CovidInfoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidInfoEndpoint.swift; sourceTree = "<group>"; };
 		0A4BBD3E25BA20F30048B2E4 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		0AED97B625BB1B5300E57DE3 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		0A410D8225B9C24C0063F8BB /* CovidApp */ = {
 			isa = PBXGroup;
 			children = (
+				0AED97B525BB1B3F00E57DE3 /* Extension */,
 				0A3CD88325B9F9210017D785 /* Architecture */,
 				0A410D9B25B9F6770063F8BB /* Scenes */,
 				0A410D9A25B9F64F0063F8BB /* NetworkLayer */,
@@ -166,6 +169,14 @@
 				0A4BBD3A25BA16190048B2E4 /* CovidInfoEndpoint.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		0AED97B525BB1B3F00E57DE3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0AED97B625BB1B5300E57DE3 /* UIViewExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 				0A4BBD2E25B9FD000048B2E4 /* CountryCovidInfoCellViewModel.swift in Sources */,
 				0A4BBD3325BA05950048B2E4 /* BaseViewController.swift in Sources */,
 				0A410DA325B9F6E50063F8BB /* SearchCountryPresenter.swift in Sources */,
+				0AED97B725BB1B5300E57DE3 /* UIViewExtension.swift in Sources */,
 				0A410D8425B9C24C0063F8BB /* AppDelegate.swift in Sources */,
 				0A4BBD3B25BA16190048B2E4 /* CovidInfoEndpoint.swift in Sources */,
 				0A4BBD2625B9FBF90048B2E4 /* CountryCovidInfo.swift in Sources */,

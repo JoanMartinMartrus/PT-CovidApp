@@ -11,6 +11,7 @@ class CountryCovidInfoCellCell: UITableViewCell, GetCellIdentifierProtocol {
     
     // MARK: - IBOutlets
     
+    @IBOutlet var covidInfoView: UIView!
     @IBOutlet var countryNameLabel: UILabel!
     @IBOutlet var totalNumberOfDeathsLabel: UILabel!
     
@@ -19,8 +20,13 @@ class CountryCovidInfoCellCell: UITableViewCell, GetCellIdentifierProtocol {
         super.awakeFromNib()
         self.selectionStyle = .none
     }
+    
 
     // MARK: - Internal Methods -
+    
+    func configureCell() {
+        covidInfoView.roundAndShadowView()
+    }
     
     func setCountryName(name: String) {
         countryNameLabel.text = name

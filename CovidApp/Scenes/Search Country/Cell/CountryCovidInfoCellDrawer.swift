@@ -18,6 +18,8 @@ internal final class CountryCovidInfoCellDrawer: CellDrawerProtocol {
         guard let cell = cell as? CountryCovidInfoCellCell, let cellVM = item as? CountryCovidInfoCellViewModel else {
             return
         }
+        
+        cell.configureCell()
         cell.setCountryName(name: cellVM.countryName)
         cell.setTotalNumberOfDeaths(numberOfDeaths: cellVM.totalDeaths)   
     }
