@@ -19,7 +19,9 @@
 		0A410DA625B9F6E60063F8BB /* SearchCountryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A410DA025B9F6E50063F8BB /* SearchCountryInteractor.swift */; };
 		0A410DA725B9F6E60063F8BB /* SearchCountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A410DA125B9F6E50063F8BB /* SearchCountryViewModel.swift */; };
 		0A410DA825B9F6E60063F8BB /* SearchCountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A410DA225B9F6E50063F8BB /* SearchCountryViewController.xib */; };
-		0A4BBD2625B9FBF90048B2E4 /* CountryCovidInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BBD2525B9FBF90048B2E4 /* CountryCovidInfo.swift */; };
+		0A43F5D125BCAA8C0097217A /* ContryCovidReportResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A43F5D025BCAA8C0097217A /* ContryCovidReportResponse.swift */; };
+		0A43F5D425BCAAE50097217A /* ProvinceCovidReportResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A43F5D325BCAAE50097217A /* ProvinceCovidReportResponse.swift */; };
+		0A4BBD2625B9FBF90048B2E4 /* CountryCovidInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BBD2525B9FBF90048B2E4 /* CountryCovidInfoResponse.swift */; };
 		0A4BBD2D25B9FD000048B2E4 /* CountryCovidInfoCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BBD2925B9FD000048B2E4 /* CountryCovidInfoCellCell.swift */; };
 		0A4BBD2E25B9FD000048B2E4 /* CountryCovidInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BBD2A25B9FD000048B2E4 /* CountryCovidInfoCellViewModel.swift */; };
 		0A4BBD2F25B9FD000048B2E4 /* CountryCovidInfoCellCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A4BBD2B25B9FD000048B2E4 /* CountryCovidInfoCellCell.xib */; };
@@ -30,6 +32,12 @@
 		0A4BBD3F25BA20F30048B2E4 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4BBD3E25BA20F30048B2E4 /* NetworkDispatcher.swift */; };
 		0AED97B725BB1B5300E57DE3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED97B625BB1B5300E57DE3 /* UIViewExtension.swift */; };
 		0AED97BD25BB360700E57DE3 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED97BC25BB360700E57DE3 /* NetworkLogger.swift */; };
+		0AED97C725BB3DEB00E57DE3 /* CountryDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED97C125BB3DEB00E57DE3 /* CountryDetailPresenter.swift */; };
+		0AED97C825BB3DEB00E57DE3 /* CountryDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED97C225BB3DEB00E57DE3 /* CountryDetailRouter.swift */; };
+		0AED97C925BB3DEB00E57DE3 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED97C325BB3DEB00E57DE3 /* CountryDetailViewController.swift */; };
+		0AED97CA25BB3DEB00E57DE3 /* CountryDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED97C425BB3DEB00E57DE3 /* CountryDetailInteractor.swift */; };
+		0AED97CB25BB3DEB00E57DE3 /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED97C525BB3DEB00E57DE3 /* CountryDetailViewModel.swift */; };
+		0AED97CC25BB3DEB00E57DE3 /* CountryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AED97C625BB3DEB00E57DE3 /* CountryDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +55,9 @@
 		0A410DA025B9F6E50063F8BB /* SearchCountryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCountryInteractor.swift; sourceTree = "<group>"; };
 		0A410DA125B9F6E50063F8BB /* SearchCountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCountryViewModel.swift; sourceTree = "<group>"; };
 		0A410DA225B9F6E50063F8BB /* SearchCountryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCountryViewController.xib; sourceTree = "<group>"; };
-		0A4BBD2525B9FBF90048B2E4 /* CountryCovidInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCovidInfo.swift; sourceTree = "<group>"; };
+		0A43F5D025BCAA8C0097217A /* ContryCovidReportResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContryCovidReportResponse.swift; sourceTree = "<group>"; };
+		0A43F5D325BCAAE50097217A /* ProvinceCovidReportResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceCovidReportResponse.swift; sourceTree = "<group>"; };
+		0A4BBD2525B9FBF90048B2E4 /* CountryCovidInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCovidInfoResponse.swift; sourceTree = "<group>"; };
 		0A4BBD2925B9FD000048B2E4 /* CountryCovidInfoCellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCovidInfoCellCell.swift; sourceTree = "<group>"; };
 		0A4BBD2A25B9FD000048B2E4 /* CountryCovidInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCovidInfoCellViewModel.swift; sourceTree = "<group>"; };
 		0A4BBD2B25B9FD000048B2E4 /* CountryCovidInfoCellCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCovidInfoCellCell.xib; sourceTree = "<group>"; };
@@ -58,6 +68,12 @@
 		0A4BBD3E25BA20F30048B2E4 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		0AED97B625BB1B5300E57DE3 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0AED97BC25BB360700E57DE3 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		0AED97C125BB3DEB00E57DE3 /* CountryDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailPresenter.swift; sourceTree = "<group>"; };
+		0AED97C225BB3DEB00E57DE3 /* CountryDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailRouter.swift; sourceTree = "<group>"; };
+		0AED97C325BB3DEB00E57DE3 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
+		0AED97C425BB3DEB00E57DE3 /* CountryDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailInteractor.swift; sourceTree = "<group>"; };
+		0AED97C525BB3DEB00E57DE3 /* CountryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModel.swift; sourceTree = "<group>"; };
+		0AED97C625BB3DEB00E57DE3 /* CountryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +133,9 @@
 		0A410D9825B9F0530063F8BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0A4BBD2525B9FBF90048B2E4 /* CountryCovidInfo.swift */,
+				0A4BBD2525B9FBF90048B2E4 /* CountryCovidInfoResponse.swift */,
+				0A43F5D025BCAA8C0097217A /* ContryCovidReportResponse.swift */,
+				0A43F5D325BCAAE50097217A /* ProvinceCovidReportResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,6 +153,7 @@
 		0A410D9B25B9F6770063F8BB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0AED97C025BB3D5000E57DE3 /* Country Detail  */,
 				0A410D9C25B9F6930063F8BB /* Search Country */,
 			);
 			path = Scenes;
@@ -188,6 +207,19 @@
 				0AED97BC25BB360700E57DE3 /* NetworkLogger.swift */,
 			);
 			path = NetworkUtils;
+			sourceTree = "<group>";
+		};
+		0AED97C025BB3D5000E57DE3 /* Country Detail  */ = {
+			isa = PBXGroup;
+			children = (
+				0AED97C125BB3DEB00E57DE3 /* CountryDetailPresenter.swift */,
+				0AED97C225BB3DEB00E57DE3 /* CountryDetailRouter.swift */,
+				0AED97C325BB3DEB00E57DE3 /* CountryDetailViewController.swift */,
+				0AED97C425BB3DEB00E57DE3 /* CountryDetailInteractor.swift */,
+				0AED97C525BB3DEB00E57DE3 /* CountryDetailViewModel.swift */,
+				0AED97C625BB3DEB00E57DE3 /* CountryDetailViewController.xib */,
+			);
+			path = "Country Detail ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +281,7 @@
 			files = (
 				0A4BBD2F25B9FD000048B2E4 /* CountryCovidInfoCellCell.xib in Resources */,
 				0A410D9025B9C24E0063F8BB /* LaunchScreen.storyboard in Resources */,
+				0AED97CC25BB3DEB00E57DE3 /* CountryDetailViewController.xib in Resources */,
 				0A410DA825B9F6E60063F8BB /* SearchCountryViewController.xib in Resources */,
 				0A410D8D25B9C24E0063F8BB /* Assets.xcassets in Resources */,
 			);
@@ -263,6 +296,7 @@
 			files = (
 				0A3CD88725B9F95A0017D785 /* StrategyPatternForCells.swift in Sources */,
 				0A4BBD3025B9FD000048B2E4 /* CountryCovidInfoCellDrawer.swift in Sources */,
+				0AED97CB25BB3DEB00E57DE3 /* CountryDetailViewModel.swift in Sources */,
 				0A410DA625B9F6E60063F8BB /* SearchCountryInteractor.swift in Sources */,
 				0A4BBD2E25B9FD000048B2E4 /* CountryCovidInfoCellViewModel.swift in Sources */,
 				0A4BBD3325BA05950048B2E4 /* BaseViewController.swift in Sources */,
@@ -271,14 +305,20 @@
 				0A410D8425B9C24C0063F8BB /* AppDelegate.swift in Sources */,
 				0A4BBD3B25BA16190048B2E4 /* CovidInfoEndpoint.swift in Sources */,
 				0AED97BD25BB360700E57DE3 /* NetworkLogger.swift in Sources */,
-				0A4BBD2625B9FBF90048B2E4 /* CountryCovidInfo.swift in Sources */,
+				0A4BBD2625B9FBF90048B2E4 /* CountryCovidInfoResponse.swift in Sources */,
 				0A4BBD2D25B9FD000048B2E4 /* CountryCovidInfoCellCell.swift in Sources */,
 				0A4BBD3725BA08C80048B2E4 /* Endpoint.swift in Sources */,
+				0A43F5D425BCAAE50097217A /* ProvinceCovidReportResponse.swift in Sources */,
 				0A410DA425B9F6E50063F8BB /* SearchCountryRouter.swift in Sources */,
+				0AED97C925BB3DEB00E57DE3 /* CountryDetailViewController.swift in Sources */,
+				0AED97CA25BB3DEB00E57DE3 /* CountryDetailInteractor.swift in Sources */,
+				0AED97C825BB3DEB00E57DE3 /* CountryDetailRouter.swift in Sources */,
 				0A3CD88625B9F95A0017D785 /* ViewControllerIdentifierProtocol.swift in Sources */,
 				0A410DA725B9F6E60063F8BB /* SearchCountryViewModel.swift in Sources */,
 				0A4BBD3F25BA20F30048B2E4 /* NetworkDispatcher.swift in Sources */,
+				0A43F5D125BCAA8C0097217A /* ContryCovidReportResponse.swift in Sources */,
 				0A410D8625B9C24C0063F8BB /* SceneDelegate.swift in Sources */,
+				0AED97C725BB3DEB00E57DE3 /* CountryDetailPresenter.swift in Sources */,
 				0A410DA525B9F6E50063F8BB /* SearchCountryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

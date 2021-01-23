@@ -25,7 +25,7 @@ class SearchCountryInteractor: SearchCountryBusinessLogic
     //var service: ItemService()
     
     func getCountriesCovidInfo() {
-        NetworkDispatcher.request(endpoint: CovidInfoEndpoint.getCountryList) { (result: Result<[CountryCovidInfo], Error>) in
+        NetworkDispatcher.request(endpoint: CovidInfoEndpoint.getCountryList) { (result: Result<[CountryCovidInfoResponse], Error>) in
             switch result {
             case .success(let response):
                 self.presenter?.onDataLoadSucceed(countriesCovidInfo: response)

@@ -22,6 +22,7 @@ class NetworkDispatcher {
         urlRequest.httpMethod = endpoint.method
         
         let session = URLSession(configuration: .default)
+        NetworkLogger.log(request: urlRequest)
         let dataTask = session.dataTask(with: urlRequest) { (data, response, error) in
             
             if let error = error {
@@ -32,14 +33,13 @@ class NetworkDispatcher {
             guard  response != nil, let data = data else { return }
             
             DispatchQueue.main.async {
-                if let responseObject = try? JSONDecoder().decode(T.self, from: data) {
+                do {
+                    let responseObject = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(responseObject))
-                } else {
-                    let error = NSError(domain: "", code: 200, userInfo: [NSLocalizedDescriptionKey: "Something went wrong"])
+                } catch let error {
                     completion(.failure(error))
                 }
             }
-            NetworkLogger.log(request: urlRequest)
             if let httpResponse = response as? HTTPURLResponse {
                 NetworkLogger.log(response: httpResponse, data: data, error: error)
             }

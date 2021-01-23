@@ -22,7 +22,7 @@ class SearchCountryViewController: BaseViewController, SearchCountryDisplayLogic
 {
 
     var interactor: SearchCountryBusinessLogic?
-    var router: (NSObjectProtocol & SearchCountryRoutingLogic)?
+    var router:  SearchCountryRoutingLogic?
     
     // MARK: IBoutlets
     
@@ -149,5 +149,11 @@ extension SearchCountryViewController: UISearchBarDelegate {
         tableView.reloadData()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cellModel = filteredCellModels[indexPath.row] as? CountryCovidInfoCellViewModel {
+            router?.navigateToCountryDetailViewController(withParameters: cellModel.countryCovidInfo)
+        }
+ 
+    }
     
 }

@@ -12,20 +12,23 @@
 
 import UIKit
 
-@objc protocol SearchCountryRoutingLogic
+protocol SearchCountryRoutingLogic
 {
-  //func navigateToAnotherScreen(withParameter: model)
+    func navigateToCountryDetailViewController(withParameters: CountryCovidInfoResponse)
 }
 
-class SearchCountryRouter: NSObject, SearchCountryRoutingLogic
+class SearchCountryRouter: SearchCountryRoutingLogic
 {
+
   weak var viewController: SearchCountryViewController?
   
-  // MARK: Routing
+    // MARK: Routing
       
-//    func navigateToExampleViewController(withParameters:Model) {
-//        let vc = ExampleViewController()
-//        vc.model = model
-//        viewController?.show(vc, sender: nil)
-//    }
+    func navigateToCountryDetailViewController(withParameters: CountryCovidInfoResponse) {
+        let vc = CountryDetailViewController()
+        vc.countryName = withParameters.country
+        viewController?.navigationController?.show(vc, sender: nil)
+    }
+    
+
 }

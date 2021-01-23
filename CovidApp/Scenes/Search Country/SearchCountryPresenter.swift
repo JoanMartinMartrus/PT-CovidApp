@@ -14,7 +14,7 @@ import UIKit
 
 protocol SearchCountryPresentationLogic
 {
-    func onDataLoadSucceed(countriesCovidInfo: [CountryCovidInfo])
+    func onDataLoadSucceed(countriesCovidInfo: [CountryCovidInfoResponse])
     func onDataLoadError(error: Error)
 }
 
@@ -24,7 +24,7 @@ class SearchCountryPresenter: SearchCountryPresentationLogic
     
     // MARK: SearchCountryPresentationLogic protocol implementation
     
-    func onDataLoadSucceed(countriesCovidInfo: [CountryCovidInfo]) {
+    func onDataLoadSucceed(countriesCovidInfo: [CountryCovidInfoResponse]) {
         var cellModels: [DrawerItemProtocol] = []
         countriesCovidInfo.forEach { (countryCovidInfo) in
             cellModels.append(CountryCovidInfoCellViewModel.init(countryCovidInfo: countryCovidInfo))

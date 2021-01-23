@@ -9,8 +9,8 @@ import Foundation
 internal final class CountryCovidInfoCellViewModel {
     var countryName: String
     var totalDeaths: Int
-    var countryCovidInfo: CountryCovidInfo
-    init(countryCovidInfo: CountryCovidInfo) {
+    var countryCovidInfo: CountryCovidInfoResponse
+    init(countryCovidInfo: CountryCovidInfoResponse) {
         self.countryName = countryCovidInfo.country ?? ""
         self.totalDeaths = countryCovidInfo.deaths ?? 0
         self.countryCovidInfo = countryCovidInfo

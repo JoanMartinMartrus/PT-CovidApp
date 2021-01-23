@@ -18,7 +18,7 @@ class CountryCovidInfoCellCell: UITableViewCell, GetCellIdentifierProtocol {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.selectionStyle = .none
+        self.selectionStyle = .gray
     }
     
 

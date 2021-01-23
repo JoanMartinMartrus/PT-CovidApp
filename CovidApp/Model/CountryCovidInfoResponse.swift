@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CountryCovidInfo: Codable {
+struct CountryCovidInfoResponse: Codable {
     var country: String?
     var code: String?
     var confirmed: Int?
