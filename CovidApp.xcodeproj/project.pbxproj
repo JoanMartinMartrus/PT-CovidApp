@@ -38,6 +38,7 @@
 		0AED97CA25BB3DEB00E57DE3 /* CountryDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED97C425BB3DEB00E57DE3 /* CountryDetailInteractor.swift */; };
 		0AED97CB25BB3DEB00E57DE3 /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED97C525BB3DEB00E57DE3 /* CountryDetailViewModel.swift */; };
 		0AED97CC25BB3DEB00E57DE3 /* CountryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AED97C625BB3DEB00E57DE3 /* CountryDetailViewController.xib */; };
+		ADBB9BCAFAFA639DBCDCA31E /* Pods_CovidApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8350C682D6DF88D296E473B /* Pods_CovidApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,9 @@
 		0AED97C425BB3DEB00E57DE3 /* CountryDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailInteractor.swift; sourceTree = "<group>"; };
 		0AED97C525BB3DEB00E57DE3 /* CountryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModel.swift; sourceTree = "<group>"; };
 		0AED97C625BB3DEB00E57DE3 /* CountryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryDetailViewController.xib; sourceTree = "<group>"; };
+		3C273F3E954DA428A327FF77 /* Pods-CovidApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidApp.debug.xcconfig"; path = "Target Support Files/Pods-CovidApp/Pods-CovidApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A8350C682D6DF88D296E473B /* Pods_CovidApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB65366E5A778F8C6FFCEF7F /* Pods-CovidApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidApp.release.xcconfig"; path = "Target Support Files/Pods-CovidApp/Pods-CovidApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBB9BCAFAFA639DBCDCA31E /* Pods_CovidApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +106,8 @@
 			children = (
 				0A410D8225B9C24C0063F8BB /* CovidApp */,
 				0A410D8125B9C24C0063F8BB /* Products */,
+				E260E9D73EA3A3F4BABA0592 /* Pods */,
+				F4A21DC6258954A7666D6A67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,6 +229,24 @@
 			path = "Country Detail ";
 			sourceTree = "<group>";
 		};
+		E260E9D73EA3A3F4BABA0592 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C273F3E954DA428A327FF77 /* Pods-CovidApp.debug.xcconfig */,
+				EB65366E5A778F8C6FFCEF7F /* Pods-CovidApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F4A21DC6258954A7666D6A67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8350C682D6DF88D296E473B /* Pods_CovidApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,9 +254,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A410D9425B9C24E0063F8BB /* Build configuration list for PBXNativeTarget "CovidApp" */;
 			buildPhases = (
+				3E4BEFF29D96E153FD36B3F9 /* [CP] Check Pods Manifest.lock */,
 				0A410D7C25B9C24C0063F8BB /* Sources */,
 				0A410D7D25B9C24C0063F8BB /* Frameworks */,
 				0A410D7E25B9C24C0063F8BB /* Resources */,
+				D4792FF2B72F6052D00F0074 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +315,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E4BEFF29D96E153FD36B3F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CovidApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4792FF2B72F6052D00F0074 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CovidApp/Pods-CovidApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CovidApp/Pods-CovidApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CovidApp/Pods-CovidApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A410D7C25B9C24C0063F8BB /* Sources */ = {
@@ -455,6 +524,7 @@
 		};
 		0A410D9525B9C24E0063F8BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C273F3E954DA428A327FF77 /* Pods-CovidApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +545,7 @@
 		};
 		0A410D9625B9C24E0063F8BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB65366E5A778F8C6FFCEF7F /* Pods-CovidApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
