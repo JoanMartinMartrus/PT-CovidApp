@@ -24,7 +24,16 @@ class CountryDetailPresenter: CountryDetailPresentationLogic
     weak var viewController: CountryDetailDisplayLogic?
   
     func onDataLoadSucced(countryCovidReport: CountryCovidReportResponse) {
-        return
+        var cellsModels: [CollectionDrawerItemProtocol] = []
+        countryCovidReport.provinces?.forEach({ (province) in
+            cellsModels.append(ProvinceDetailViewModel.init(provinceName: province.province ?? "" ,
+                                                           confirmed: province.confirmed ?? 0,
+                                                           recovered: province.recovered ?? 0 ,
+                                                           deaths: province.deaths ?? 0,
+                                                           active: province.active ?? 0))
+        })
+        
+        viewController?.showData(cellsModels: cellsModels)
     }
     
     func onDataLoadFailed(error: Error) {

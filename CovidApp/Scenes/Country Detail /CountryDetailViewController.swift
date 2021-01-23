@@ -14,22 +14,33 @@ import UIKit
 
 protocol CountryDetailDisplayLogic: class
 {
+    func showData(cellsModels: [CollectionDrawerItemProtocol])
     func showError(error: Error)
 }
 
 class CountryDetailViewController: BaseViewController, CountryDetailDisplayLogic
 {
+
     var interactor: CountryDetailBusinessLogic?
     var router: (NSObjectProtocol & CountryDetailRoutingLogic)?
     
     // MARK: IBoutlets
     
+    @IBOutlet var collectionView: UICollectionView!
     
     // MARK: Properties
     
     var countryName: String?
+    var cellsModels: [CollectionDrawerItemProtocol] = []
     
     // MARK: CountryDetailDisplayLogic protocol implementation
+    
+    func showData(cellsModels: [CollectionDrawerItemProtocol]) {
+        self.removeSpinner()
+        self.cellsModels = cellsModels
+        collectionView.reloadData()
+    }
+    
     
     func showError(error: Error) {
         self.removeSpinner()
@@ -70,6 +81,9 @@ class CountryDetailViewController: BaseViewController, CountryDetailDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,5 +97,24 @@ class CountryDetailViewController: BaseViewController, CountryDetailDisplayLogic
             interactor?.getCountryInfo(countryName: countryName, date: "06-05-2020")
         }
     }
-  
+}
+
+extension CountryDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        cellsModels.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cellModel = cellsModels[indexPath.row]
+        let drawer = cellModel.collectionDrawer
+        let cell = drawer.dequeueCollectionCell(collectionView, indexPath: indexPath)
+        drawer.drawCollectionCell(cell, withItem: cellModel)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.contentSize.width/2.0, height: (3.0*collectionView.contentSize.width)/4.0)
+    }
+    
+    
 }
