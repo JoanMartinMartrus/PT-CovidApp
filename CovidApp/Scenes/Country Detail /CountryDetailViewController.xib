@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountryDetailViewController">
             <connections>
                 <outlet property="collectionView" destination="KY9-b4-35b" id="yFo-iy-e7b"/>
+                <outlet property="datePicker" destination="clA-qv-frt" id="TOW-zi-ION"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KY9-b4-35b">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                     <color key="backgroundColor" red="0.90980392160000001" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="uiW-UY-Mfo">
                         <size key="itemSize" width="128" height="128"/>
@@ -28,16 +29,29 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="clA-qv-frt">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="IE6-G3-77A"/>
+                    </constraints>
+                    <connections>
+                        <action selector="datePickerEditingDidEnd:" destination="-1" eventType="editingDidEnd" id="GUz-UF-TsD"/>
+                    </connections>
+                </datePicker>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.90980392160000001" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KY9-b4-35b" secondAttribute="bottom" id="2X8-cM-uaN"/>
-                <constraint firstItem="KY9-b4-35b" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4yW-te-vjC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="clA-qv-frt" secondAttribute="top" id="2sc-gr-fyG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="clA-qv-frt" secondAttribute="trailing" id="E4Q-rG-Zkm"/>
+                <constraint firstItem="clA-qv-frt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TeV-p4-abz"/>
+                <constraint firstItem="KY9-b4-35b" firstAttribute="top" secondItem="clA-qv-frt" secondAttribute="bottom" id="dA4-mQ-eVM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KY9-b4-35b" secondAttribute="trailing" id="kMe-x5-MVT"/>
                 <constraint firstItem="KY9-b4-35b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uEU-1u-sdG"/>
             </constraints>
-            <point key="canvasLocation" x="35" y="73"/>
+            <point key="canvasLocation" x="34.782608695652179" y="72.991071428571431"/>
         </view>
     </objects>
 </document>

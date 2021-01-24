@@ -27,11 +27,25 @@ class CountryDetailViewController: BaseViewController, CountryDetailDisplayLogic
     // MARK: IBoutlets
     
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var datePicker: UIDatePicker!
     
     // MARK: Properties
     
     var countryName: String?
     var cellsModels: [CollectionDrawerItemProtocol] = []
+    
+    // MARK: Acttions
+    
+    @IBAction func datePickerEditingDidEnd(_ sender: Any) {
+        let stringDate = datePicker.date.toString(withFormatter: nil)
+        self.reloadData(withDate: stringDate)
+    }
+    
+    private func reloadData(withDate dateString: String) {
+        self.showSpinner(onView: self.view)
+        interactor?.getCountryInfo(countryName: self.countryName ?? "", date: dateString)
+    }
+    
     
     // MARK: CountryDetailDisplayLogic protocol implementation
     
@@ -94,7 +108,7 @@ class CountryDetailViewController: BaseViewController, CountryDetailDisplayLogic
     private func beginLoadInfo() {
         self.showSpinner(onView: self.view)
         if let countryName = self.countryName {
-            interactor?.getCountryInfo(countryName: countryName, date: "06-05-2020")
+            interactor?.getCountryInfo(countryName: countryName, date: Date().toString(withFormatter: nil))
         }
     }
 }
@@ -116,6 +130,5 @@ extension CountryDetailViewController: UICollectionViewDelegate, UICollectionVie
         let collectionViewWidth = collectionView.frame.size.width
         return CGSize(width: collectionViewWidth/2.0, height: (3.0*collectionViewWidth/4.0))
     }
-    
     
 }
