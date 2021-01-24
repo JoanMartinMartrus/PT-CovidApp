@@ -14,6 +14,7 @@ class ProvinceDetailCell: UICollectionViewCell, GetCollectionIdentifierProtocol 
     // MARK: - IBOutlets -
     @IBOutlet var provinceNameLabel: UILabel!
     @IBOutlet var barChartView: BarChartView!
+    @IBOutlet var cellView: UIView!
     
     // MARK: - Internal Methods -
     
@@ -28,6 +29,7 @@ class ProvinceDetailCell: UICollectionViewCell, GetCollectionIdentifierProtocol 
         
         let informationToShow = [confirmed, recovered, deaths, active]
         let labelInformationToShow = ["confirmed", "recovered", "deaths", "active"]
+        let colors: [UIColor] = [.systemBlue, .systemGreen, .systemRed, .systemOrange]
         var entries: [BarChartDataEntry] = []
         
         for i in 0..<informationToShow.count {
@@ -35,23 +37,34 @@ class ProvinceDetailCell: UICollectionViewCell, GetCollectionIdentifierProtocol 
         }
         
         let dataSet = BarChartDataSet(entries)
+        
+        dataSet.colors = colors
             
         let chartData = BarChartData(dataSet: dataSet)
                 
         barChartView.rightAxis.drawLabelsEnabled = false
         barChartView.leftAxis.drawLabelsEnabled = false
+        barChartView.leftAxis.axisMinimum = 0
+        barChartView.rightAxis.axisMinimum = 0
+        barChartView.xAxis.drawGridLinesEnabled = false
         barChartView.xAxis.labelPosition = .bottom
         barChartView.xAxis.setLabelCount(informationToShow.count, force: false)
         barChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: labelInformationToShow)
         barChartView.xAxis.labelRotationAngle = -90
-        barChartView.xAxis.labelFont = UIFont(name: "Helvetica Neue", size: 7) ?? UIFont()
+        barChartView.xAxis.labelFont = UIFont(name: "Helvetica Neue", size: 10) ?? UIFont()
         barChartView.legend.enabled = false
+        barChartView.animate(yAxisDuration: 2.0)
         
         barChartView.data = chartData
     }
     
+    private func configureCell(){
+        cellView.roundAndShadowView()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        configureCell()
     }
 
 }
