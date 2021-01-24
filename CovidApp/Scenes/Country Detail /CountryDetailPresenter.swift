@@ -27,10 +27,10 @@ class CountryDetailPresenter: CountryDetailPresentationLogic
         var cellsModels: [CollectionDrawerItemProtocol] = []
         countryCovidReport.provinces?.forEach({ (province) in
             cellsModels.append(ProvinceDetailViewModel.init(provinceName: province.province ?? "" ,
-                                                           confirmed: province.confirmed ?? 0,
-                                                           recovered: province.recovered ?? 0 ,
-                                                           deaths: province.deaths ?? 0,
-                                                           active: province.active ?? 0))
+                                                           confirmed: province.confirmed,
+                                                           recovered: province.recovered ,
+                                                           deaths: province.deaths,
+                                                           active: province.active))
         })
         
         viewController?.showData(cellsModels: cellsModels)

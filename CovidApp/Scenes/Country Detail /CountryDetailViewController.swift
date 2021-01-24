@@ -132,7 +132,8 @@ extension CountryDetailViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionViewWidth = collectionView.frame.size.width
-        return CGSize(width: collectionViewWidth/2.0, height: (3.0*collectionViewWidth/4.0))
+        let collectionViewHeight = collectionView.frame.size.height
+        return CGSize(width: collectionViewWidth/2.0, height: collectionViewHeight/2.0)
     }
     
 }

@@ -8,16 +8,16 @@
 import Foundation
 internal final class ProvinceDetailViewModel {
     var provinceName: String
-    var confirmed: Int
-    var recovered: Int
-    var deaths: Int
-    var active: Int
+    var confirmed: Int?
+    var recovered: Int?
+    var deaths: Int?
+    var active: Int?
 
     init(provinceName: String,
-         confirmed: Int,
-         recovered: Int,
-         deaths: Int,
-         active: Int) {
+         confirmed: Int?,
+         recovered: Int?,
+         deaths: Int?,
+         active: Int?) {
         self.provinceName = provinceName
         self.confirmed = confirmed
         self.recovered = recovered
