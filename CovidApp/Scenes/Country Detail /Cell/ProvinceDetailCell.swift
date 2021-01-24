@@ -41,7 +41,11 @@ class ProvinceDetailCell: UICollectionViewCell, GetCollectionIdentifierProtocol 
         dataSet.colors = colors
             
         let chartData = BarChartData(dataSet: dataSet)
-                
+        
+        barChartView.setScaleEnabled(false)
+        barChartView.doubleTapToZoomEnabled = false
+        barChartView.dragEnabled = false
+        barChartView.pinchZoomEnabled = false
         barChartView.rightAxis.drawLabelsEnabled = false
         barChartView.leftAxis.drawLabelsEnabled = false
         barChartView.leftAxis.axisMinimum = 0
@@ -66,5 +70,5 @@ class ProvinceDetailCell: UICollectionViewCell, GetCollectionIdentifierProtocol 
         super.awakeFromNib()
         configureCell()
     }
-
 }
+
