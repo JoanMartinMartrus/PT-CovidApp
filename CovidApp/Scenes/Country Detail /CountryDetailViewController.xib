@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountryDetailViewController">
             <connections>
                 <outlet property="collectionView" destination="KY9-b4-35b" id="yFo-iy-e7b"/>
+                <outlet property="countryNameLabel" destination="GlM-HV-UvI" id="ieP-bl-AGk"/>
                 <outlet property="datePicker" destination="clA-qv-frt" id="TOW-zi-ION"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,8 +20,29 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="4gB-Pp-TEy">
+                    <rect key="frame" x="8" y="52" width="398" height="57"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlM-HV-UvI">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="57"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="clA-qv-frt">
+                            <rect key="frame" x="0.0" y="0.0" width="398" height="57"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <date key="minimumDate" timeIntervalSinceReferenceDate="599526000">
+                                <!--2019-12-31 23:00:00 +0000-->
+                            </date>
+                            <connections>
+                                <action selector="datePickerEditingDidEnd:" destination="-1" eventType="editingDidEnd" id="GUz-UF-TsD"/>
+                            </connections>
+                        </datePicker>
+                    </subviews>
+                </stackView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KY9-b4-35b">
-                    <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                    <rect key="frame" x="0.0" y="117" width="414" height="745"/>
                     <color key="backgroundColor" red="0.90980392160000001" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="uiW-UY-Mfo">
                         <size key="itemSize" width="128" height="128"/>
@@ -29,25 +51,15 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="clA-qv-frt">
-                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
-                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="IE6-G3-77A"/>
-                    </constraints>
-                    <connections>
-                        <action selector="datePickerEditingDidEnd:" destination="-1" eventType="editingDidEnd" id="GUz-UF-TsD"/>
-                    </connections>
-                </datePicker>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.90980392160000001" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KY9-b4-35b" secondAttribute="bottom" id="2X8-cM-uaN"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="clA-qv-frt" secondAttribute="top" id="2sc-gr-fyG"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="clA-qv-frt" secondAttribute="trailing" id="E4Q-rG-Zkm"/>
-                <constraint firstItem="clA-qv-frt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TeV-p4-abz"/>
-                <constraint firstItem="KY9-b4-35b" firstAttribute="top" secondItem="clA-qv-frt" secondAttribute="bottom" id="dA4-mQ-eVM"/>
+                <constraint firstItem="KY9-b4-35b" firstAttribute="top" secondItem="4gB-Pp-TEy" secondAttribute="bottom" constant="8" id="Dbw-xS-l1X"/>
+                <constraint firstItem="4gB-Pp-TEy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="Ngt-0J-gZe"/>
+                <constraint firstItem="4gB-Pp-TEy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="dgY-RE-O9M"/>
+                <constraint firstAttribute="trailing" secondItem="4gB-Pp-TEy" secondAttribute="trailing" constant="8" id="eGj-kj-IXs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KY9-b4-35b" secondAttribute="trailing" id="kMe-x5-MVT"/>
                 <constraint firstItem="KY9-b4-35b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uEU-1u-sdG"/>
             </constraints>

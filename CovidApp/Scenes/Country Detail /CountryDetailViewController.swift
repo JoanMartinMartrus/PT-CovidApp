@@ -28,6 +28,7 @@ class CountryDetailViewController: BaseViewController, CountryDetailDisplayLogic
     
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var countryNameLabel: UILabel!
     
     // MARK: Properties
     
@@ -40,6 +41,7 @@ class CountryDetailViewController: BaseViewController, CountryDetailDisplayLogic
         let stringDate = datePicker.date.toString(withFormatter: nil)
         self.reloadData(withDate: stringDate)
     }
+
     
     private func reloadData(withDate dateString: String) {
         self.showSpinner(onView: self.view)
@@ -98,6 +100,8 @@ class CountryDetailViewController: BaseViewController, CountryDetailDisplayLogic
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        self.countryNameLabel.text = self.countryName
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,7 +112,7 @@ class CountryDetailViewController: BaseViewController, CountryDetailDisplayLogic
     private func beginLoadInfo() {
         self.showSpinner(onView: self.view)
         if let countryName = self.countryName {
-            interactor?.getCountryInfo(countryName: countryName, date: Date().toString(withFormatter: nil))
+            interactor?.getCountryInfo(countryName: countryName, date: datePicker.date.toString(withFormatter: nil))
         }
     }
 }
